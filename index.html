@@ -392,7 +392,7 @@
             // Thumbnail with play button — click to swap in iframe
             const thumbUrl = `https://img.youtube.com/vi/${vid.id}/hqdefault.jpg`;
             card.innerHTML = `
-                <div class="vid-thumb relative cursor-pointer" style="height:280px;" data-vid="${vid.id}" data-cap="${vid.cap.replace(/"/g, '&quot;')}">
+                <div class="vid-thumb relative cursor-pointer aspect-video w-full" data-vid="${vid.id}" data-cap="${vid.cap.replace(/"/g, '&quot;')}">
                     <img src="${thumbUrl}" alt="${vid.cap}" class="w-full h-full object-cover" style="border-radius:6px 6px 0 0; display:block;">
                     <div class="absolute inset-0 flex items-center justify-center bg-black/30 hover:bg-black/10 transition-colors duration-300" style="border-radius:6px 6px 0 0;">
                         <svg width="68" height="68" viewBox="0 0 68 68" fill="none"><circle cx="34" cy="34" r="33" stroke="white" stroke-width="2" fill="rgba(0,0,0,0.5)"/><polygon points="28,20 28,48 50,34" fill="white"/></svg>
@@ -413,8 +413,7 @@
                 const vidCap = this.dataset.cap;
                 this.outerHTML = `
                     <iframe 
-                        width="100%" 
-                        height="280" 
+                        class="w-full aspect-video" 
                         src="https://www.youtube.com/embed/${vidId}?autoplay=1" 
                         title="${vidCap}" 
                         frameborder="0" 
