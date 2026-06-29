@@ -57,7 +57,7 @@
         }
 
         /* Scroll Reveal */
-        .reveal { opacity: 0; transform: translateY(36px); transition: all 0.8s cubic-bezier(0.76, 0, 0.24, 1); }
+        .reveal { opacity: 0; transform: translateY(36px); transition: all 1.2s cubic-bezier(0.76, 0, 0.24, 1); }
         .reveal.active { opacity: 1; transform: translateY(0); }
         
         /* Intro Animation */
@@ -192,8 +192,8 @@
                     </div>
                 </div>
             </div>
-            <div class="w-full md:w-[45%] h-[60vh] md:h-[80vh] relative overflow-hidden reveal">
-                <img id="hero-img" src="assets/images/landing_page_image.jpeg" class="w-full h-[115%] object-cover object-top" alt="Anchor Shivangi Portrait">
+            <div class="w-full md:w-[45%] h-auto md:h-[80vh] relative overflow-hidden reveal rounded-xl">
+                <img id="hero-img" src="assets/images/landing_page_image.jpeg" class="w-full h-auto max-h-[75vh] md:max-h-none md:h-[115%] object-contain md:object-cover object-top mx-auto" alt="Anchor Shivangi Portrait">
             </div>
         </section>
 
@@ -327,20 +327,20 @@
         if (!hasPlayed) {
             document.body.style.overflow = 'hidden';
             introImages.forEach((img, i) => {
-                setTimeout(() => img.classList.add('active'), i * 120);
+                setTimeout(() => img.classList.add('active'), i * 80);
             });
-            setTimeout(() => { introLine.style.width = '12rem'; }, 1000);
+            setTimeout(() => { introLine.style.width = '12rem'; }, 700);
             setTimeout(() => {
                 document.querySelectorAll('.char').forEach((c, i) => {
-                    setTimeout(() => c.style.opacity = '1', i * 100);
+                    setTimeout(() => c.style.opacity = '1', i * 70);
                 });
-            }, 1500);
-            setTimeout(() => { introSubtitle.style.opacity = '1'; }, 2500);
+            }, 1000);
+            setTimeout(() => { introSubtitle.style.opacity = '1'; }, 1600);
             setTimeout(() => {
                 introScreen.style.transform = 'translateY(-100%)';
                 document.body.style.overflow = 'auto';
                 localStorage.setItem('shivangi_intro_played', 'true');
-            }, 4500);
+            }, 2800);
         } else {
             introScreen.style.display = 'none';
         }
@@ -450,14 +450,14 @@
             const rowDiv = document.createElement('div');
             rowDiv.className = "flex flex-col md:flex-row gap-8 w-full";
             rowDiv.innerHTML = `
-                <div class="w-full ${w1} aspect-[4/3] relative overflow-hidden img-container card-hover border border-transparent rounded-md reveal">
-                    <img src="assets/images/event_highlight_${i1}.jpeg" class="w-full h-full object-cover" loading="lazy" alt="${cap1}">
+                <div class="w-full ${w1} aspect-auto md:aspect-[4/3] relative overflow-hidden img-container card-hover border border-transparent rounded-md reveal bg-brand-navy/5">
+                    <img src="assets/images/event_highlight_${i1}.jpeg" class="w-full h-auto md:h-full object-contain md:object-cover" loading="lazy" alt="${cap1}">
                     <div class="absolute inset-0 bg-brand-navy/80 img-overlay flex flex-col justify-end p-8 text-white items-center">
                         <span class="font-serif text-3xl text-center italic">${cap1}</span>
                     </div>
                 </div>
-                <div class="w-full ${w2} aspect-[4/3] relative overflow-hidden img-container card-hover border border-transparent rounded-md reveal">
-                    <img src="assets/images/event_highlight_${i2}.jpeg" class="w-full h-full object-cover" loading="lazy" alt="${cap2}">
+                <div class="w-full ${w2} aspect-auto md:aspect-[4/3] relative overflow-hidden img-container card-hover border border-transparent rounded-md reveal bg-brand-navy/5">
+                    <img src="assets/images/event_highlight_${i2}.jpeg" class="w-full h-auto md:h-full object-contain md:object-cover" loading="lazy" alt="${cap2}">
                     <div class="absolute inset-0 bg-brand-navy/80 img-overlay flex flex-col justify-end p-8 text-white items-center">
                         <span class="font-serif text-3xl text-center italic">${cap2}</span>
                     </div>
