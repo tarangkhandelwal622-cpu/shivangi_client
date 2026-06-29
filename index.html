@@ -105,26 +105,26 @@
 
         /* ─── MOBILE RESPONSIVE ─────────────────────────────── */
         @media (max-width: 768px) {
-            .hero-title { font-size: 28px; line-height: 1.2; }
-            .section-title { font-size: 26px; line-height: 1.25; }
-            .body-text { font-size: 14px; line-height: 1.75; }
-            .label-text { font-size: 10px; letter-spacing: 0.2em; }
+            .hero-title { font-size: 28px !important; line-height: 1.2 !important; }
+            .section-title { font-size: 24px !important; line-height: 1.25 !important; }
+            .body-text { font-size: 14px !important; line-height: 1.75 !important; }
+            .label-text { font-size: 10px !important; letter-spacing: 0.2em !important; }
 
             /* Reduce section vertical padding */
             section { padding-top: 3.5rem !important; padding-bottom: 3.5rem !important; }
 
             /* Hero stats row */
-            .hero-title + p { font-size: 14px; }
+            .hero-title + p { font-size: 14px !important; }
 
             /* About quote */
-            .border-l-\[3px\] { font-size: 20px !important; padding-left: 1rem; }
+            .border-l-\[3px\] { font-size: 18px !important; padding-left: 1rem !important; }
 
             /* Contact section cards */
             #contact .grid a { padding: 2rem 1.5rem !important; }
-            #contact .grid svg, #contact .grid .material-symbols-outlined { width: 28px; height: 28px; font-size: 28px !important; margin-bottom: 0.75rem !important; }
+            #contact .grid svg, #contact .grid .material-symbols-outlined { width: 28px !important; height: 28px !important; font-size: 28px !important; margin-bottom: 0.75rem !important; }
 
             /* Footer */
-            footer h2 { font-size: 1.25rem; }
+            footer h2 { font-size: 1.25rem !important; }
             footer { padding-top: 2rem !important; padding-bottom: 2rem !important; }
         }
     </style>
@@ -141,7 +141,7 @@
 
     <!-- Background Fixed Grid -->
     <div class="fixed inset-0 z-[-1] pointer-events-none">
-        <div class="grid grid-cols-3 grid-rows-3 w-full h-full">
+        <div class="grid grid-cols-2 md:grid-cols-3 grid-rows-5 md:grid-rows-3 w-full h-full">
             <div class="bg-cover bg-center" style="background-image: url('assets/images/background_1.jpeg')"></div>
             <div class="bg-cover bg-center" style="background-image: url('assets/images/background_2.jpeg')"></div>
             <div class="bg-cover bg-center" style="background-image: url('assets/images/background_3.jpeg')"></div>
@@ -281,7 +281,7 @@
                 <span class="label-text text-brand-rose mb-4 block">A DECADE IN FRAMES</span>
                 <h3 class="section-title text-brand-plum">Event Highlights</h3>
             </div>
-            <div class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="highlights-container">
+            <div class="max-w-[1200px] mx-auto grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8" id="highlights-container">
                 <!-- Highlights Populated via JS -->
             </div>
         </section>
@@ -412,7 +412,7 @@
         const videoContainer = document.getElementById('video-container');
         videos.forEach((vid) => {
             const card = document.createElement('div');
-            card.className = "min-w-[85vw] md:min-w-[500px] shrink-0 border border-brand-gold/30 snap-center card-hover bg-brand-navy flex flex-col rounded-md overflow-hidden reveal";
+            card.className = "w-[85vw] max-w-[300px] md:max-w-none md:min-w-[500px] shrink-0 border border-brand-gold/30 snap-center card-hover bg-brand-navy flex flex-col rounded-md overflow-hidden reveal";
             
             // Thumbnail with play button — click to swap in iframe
             const thumbUrl = `https://img.youtube.com/vi/${vid.id}/hqdefault.jpg`;
