@@ -449,16 +449,16 @@
             const w2 = (row % 2 === 0) ? "md:w-[45%]" : "md:w-[60%]";
             
             const rowDiv = document.createElement('div');
-            rowDiv.className = "flex flex-col md:flex-row gap-8 w-full";
+            rowDiv.className = "flex flex-col md:flex-row gap-8 w-full items-start";
             rowDiv.innerHTML = `
-                <div class="w-full ${w1} aspect-auto md:aspect-[4/3] relative overflow-hidden img-container card-hover border border-transparent rounded-md reveal bg-brand-navy/5">
-                    <img src="assets/images/event_highlight_${i1}.jpeg" class="w-full h-auto md:h-full object-contain md:object-cover" loading="lazy" alt="${cap1}">
+                <div class="w-full ${w1} relative overflow-hidden img-container card-hover border border-transparent rounded-md reveal bg-brand-navy/5">
+                    <img src="assets/images/event_highlight_${i1}.jpeg" class="w-full h-auto" loading="lazy" alt="${cap1}">
                     <div class="absolute inset-0 bg-brand-navy/80 img-overlay flex flex-col justify-end p-8 text-white items-center">
                         <span class="font-serif text-3xl text-center italic">${cap1}</span>
                     </div>
                 </div>
-                <div class="w-full ${w2} aspect-auto md:aspect-[4/3] relative overflow-hidden img-container card-hover border border-transparent rounded-md reveal bg-brand-navy/5">
-                    <img src="assets/images/event_highlight_${i2}.jpeg" class="w-full h-auto md:h-full object-contain md:object-cover" loading="lazy" alt="${cap2}">
+                <div class="w-full ${w2} relative overflow-hidden img-container card-hover border border-transparent rounded-md reveal bg-brand-navy/5">
+                    <img src="assets/images/event_highlight_${i2}.jpeg" class="w-full h-auto" loading="lazy" alt="${cap2}">
                     <div class="absolute inset-0 bg-brand-navy/80 img-overlay flex flex-col justify-end p-8 text-white items-center">
                         <span class="font-serif text-3xl text-center italic">${cap2}</span>
                     </div>
