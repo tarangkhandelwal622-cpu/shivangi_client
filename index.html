@@ -198,8 +198,8 @@
                     </div>
                 </div>
             </div>
-            <div class="w-full md:w-[45%] h-auto md:h-[80vh] relative overflow-hidden reveal rounded-xl">
-                <img id="hero-img" src="assets/images/landing_page_image.jpeg" class="w-full h-auto max-h-[75vh] md:max-h-none md:h-[115%] object-contain md:object-cover object-top mx-auto" alt="Anchor Shivangi Portrait">
+            <div class="w-full md:w-[45%] h-auto relative rounded-xl">
+                <img src="assets/images/landing_page_image.jpeg" class="w-full h-auto rounded-xl mx-auto shadow-lg" alt="Anchor Shivangi Portrait">
             </div>
         </section>
 
@@ -367,11 +367,6 @@
             }
         });
 
-        // Parallax Hero Image
-        const heroImg = document.getElementById('hero-img');
-        window.addEventListener('scroll', () => {
-            heroImg.style.transform = `translateY(${window.scrollY * 0.2}px)`;
-        });
 
         // ─── BUILD VIDEOS ───────────────────────────────────────────────
         const videos = [
